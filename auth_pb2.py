@@ -14,16 +14,16 @@ _sym_db = _symbol_database.Default()
 from google.protobuf import wrappers_pb2 as google_dot_protobuf_dot_wrappers__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\nauth.proto\x1a\x1egoogle/protobuf/wrappers.proto\"*\n\x07\x43redits\x12\r\n\x05login\x18\x01 \x01(\t\x12\x10\n\x08password\x18\x02 \x01(\t2A\n\x0b\x41uthService\x12\x32\n\x08\x41uthUser\x12\x08.Credits\x1a\x1a.google.protobuf.BoolValue\"\x00\x42\x13\n\x11ru.pobopo.weatherb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\nauth.proto\x12\x16ru.pobopo.weather.grpc\x1a\x1egoogle/protobuf/wrappers.proto\"*\n\x07\x43redits\x12\r\n\x05login\x18\x01 \x01(\t\x12\x10\n\x08password\x18\x02 \x01(\t2X\n\x0b\x41uthService\x12I\n\x08\x41uthUser\x12\x1f.ru.pobopo.weather.grpc.Credits\x1a\x1a.google.protobuf.BoolValue\"\x00\x42\x02P\x01\x62\x06proto3')
 
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, globals())
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'auth_pb2', globals())
 if _descriptor._USE_C_DESCRIPTORS == False:
 
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\021ru.pobopo.weather'
-  _CREDITS._serialized_start=46
-  _CREDITS._serialized_end=88
-  _AUTHSERVICE._serialized_start=90
-  _AUTHSERVICE._serialized_end=155
+  DESCRIPTOR._serialized_options = b'P\001'
+  _CREDITS._serialized_start=70
+  _CREDITS._serialized_end=112
+  _AUTHSERVICE._serialized_start=114
+  _AUTHSERVICE._serialized_end=202
 # @@protoc_insertion_point(module_scope)

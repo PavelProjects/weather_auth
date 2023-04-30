@@ -16,7 +16,7 @@ class AuthServiceStub(object):
             channel: A grpc.Channel.
         """
         self.AuthUser = channel.unary_unary(
-                '/AuthService/AuthUser',
+                '/ru.pobopo.weather.grpc.AuthService/AuthUser',
                 request_serializer=auth__pb2.Credits.SerializeToString,
                 response_deserializer=google_dot_protobuf_dot_wrappers__pb2.BoolValue.FromString,
                 )
@@ -41,7 +41,7 @@ def add_AuthServiceServicer_to_server(servicer, server):
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
-            'AuthService', rpc_method_handlers)
+            'ru.pobopo.weather.grpc.AuthService', rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
 
 
@@ -60,7 +60,7 @@ class AuthService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/AuthService/AuthUser',
+        return grpc.experimental.unary_unary(request, target, '/ru.pobopo.weather.grpc.AuthService/AuthUser',
             auth__pb2.Credits.SerializeToString,
             google_dot_protobuf_dot_wrappers__pb2.BoolValue.FromString,
             options, channel_credentials,
